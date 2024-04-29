@@ -25,13 +25,11 @@ class hotel(models.Model):
 
 
 class buyer(models.Model):
-    client = models.OneToOneField(User, on_delete=models.CASCADE, blank=True, null=True)
-    first_name = models.CharField(max_length=100, blank=True, null=True)
-    last_name = models.CharField(max_length=100, blank=True, null=True)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, blank=True, null=True)
     image = models.ImageField(upload_to="buyer/images", blank=True, null=True)
 
     def __str__(self) -> str:
-        return self.first_name
+        return f"{self.user.first_name} {self.user.last_name}"
 
 
 STAR_CHOICES = [
@@ -51,4 +49,4 @@ class Review(models.Model):
     rating = models.CharField(choices=STAR_CHOICES, max_length=10)
 
     def __str__(self):
-        return f"Buyer : {self.reviewer.first_name} ; hotel {self.hotel.name}"
+        return f"Buyer : {self.reviewer.user.first_name} ; hotel {self.hotel.name}"

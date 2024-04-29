@@ -26,7 +26,6 @@ class categorySerializer(serializers.ModelSerializer):
 
 
 class ReviewSerializer(serializers.ModelSerializer):
-    reviewer = serializers.StringRelatedField(many=False)
 
     class Meta:
         model = models.Review

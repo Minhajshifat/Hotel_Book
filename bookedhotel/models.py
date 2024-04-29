@@ -13,4 +13,4 @@ class hotel_booked(models.Model):
     cancel = models.BooleanField(default=False)
 
     def __str__(self):
-        return f"Hotel : {self.hotel.name} , Buyer : {self.buyer.first_name}"
+        return f"Hotel : {self.hotel.name} , Buyer : {self.buyer.user.first_name}"
