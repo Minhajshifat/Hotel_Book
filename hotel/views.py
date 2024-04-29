@@ -83,7 +83,9 @@ class UserRegistrationApiView(APIView):
             print("token ", token)
             uid = urlsafe_base64_encode(force_bytes(user.pk))
             print("uid ", uid)
-            confirm_link = f"http://127.0.0.1:8000/hotel/active/{uid}/{token}"
+            confirm_link = (
+                f"https://hotel-book-v78k.onrender.com/hotel/active/{uid}/{token}"
+            )
             email_subject = "Confirm Your Email"
             email_body = render_to_string(
                 "confirm_email.html", {"confirm_link": confirm_link}
