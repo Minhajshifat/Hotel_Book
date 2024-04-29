@@ -48,6 +48,7 @@ class HotelViewset(viewsets.ModelViewSet):
     filter_backends = [filters.SearchFilter]
     pagination_class = HotelPagination
     search_fields = [
+        "id",
         "name",
         "title",
         "address__address",
