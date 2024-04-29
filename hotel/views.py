@@ -37,7 +37,7 @@ class CategoryViewset(viewsets.ModelViewSet):
 
 
 class HotelPagination(pagination.PageNumberPagination):
-    page_size = 4
+    page_size = 9
     page_size_query_param = page_size
     max_page_size = 100
 
@@ -50,6 +50,7 @@ class HotelViewset(viewsets.ModelViewSet):
     search_fields = [
         "name",
         "title",
+        "address__address",
     ]
 
 
