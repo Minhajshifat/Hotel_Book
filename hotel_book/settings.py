@@ -29,6 +29,7 @@ SECRET_KEY = "django-insecure-$-6br3g6gvf1b^y2svu31$qbayztjq2h+4q!08nv7)*j(w@xut
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
+CSRF_TRUSTED_ORIGINS = ["https://hotel-book-v78k.onrender.com", "https://*.127.0.0.1"]
 
 
 # Application definition
