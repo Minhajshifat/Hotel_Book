@@ -138,7 +138,7 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = env("email")
 EMAIL_HOST_PASSWORD = env("pass_word")
 CORS_ALLOWED_ORIGINS = [
-    "https://minhajshifat.github.io/Hotel_Book_fronted/",  # Allow your development server
+    "https://minhajshifat.github.io",  # Allow your development server
     "https://hotel-book-v78k.onrender.com",
     # Allow your production domain
 ]
