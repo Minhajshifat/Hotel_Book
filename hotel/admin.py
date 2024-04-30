@@ -1,10 +1,6 @@
 from django.contrib import admin
 from hotel.models import buyer, hotel, category, Review
 
-# Register your models here.
-from django.contrib import admin
-from . import models
-
 
 # Register your models here.
 class BuyerAdmin(admin.ModelAdmin):
