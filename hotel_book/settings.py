@@ -137,7 +137,4 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = env("email")
 EMAIL_HOST_PASSWORD = env("pass_word")
-CORS_ALLOWED_ORIGINS = [
-    "http://127.0.0.1:5500",  # Allow your development server
-    "https://hotel-book-v78k.onrender.com",  # Allow your production domain
-]
+CORS_ALLOWED_ORIGINS = ["*"]
