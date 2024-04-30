@@ -137,4 +137,4 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = env("email")
 EMAIL_HOST_PASSWORD = env("pass_word")
-CORS_ALLOWED_ORIGINS = ["*"]
+CORS_ALLOWED_ORIGINS = ["*", "https://classy-pastelito-0dc7df.netlify.app/"]
