@@ -137,8 +137,5 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = env("email")
 EMAIL_HOST_PASSWORD = env("pass_word")
-CORS_ALLOWED_ORIGINS = [
-    "https://minhajshifat.github.io",  # Allow your development server
-    "https://hotel-book-v78k.onrender.com",
-    # Allow your production domain
-]
+CORS_ALLOW_ALL_ORIGIN = True
+CORS_ALLOW_CREDENTIALS = True
