@@ -58,6 +58,10 @@ class HotelViewset(viewsets.ModelViewSet):
 class BuyerViewset(viewsets.ModelViewSet):
     queryset = models.buyer.objects.all()
     serializer_class = serializers.buyerSerializer
+    filter_backends = [filters.SearchFilter]
+    search_fields = [
+        "user__id",
+    ]
 
 
 class ReviewViewset(viewsets.ModelViewSet):
