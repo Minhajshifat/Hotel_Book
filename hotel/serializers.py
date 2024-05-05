@@ -12,8 +12,6 @@ class hotelSerializer(serializers.ModelSerializer):
 
 
 class buyerSerializer(serializers.ModelSerializer):
-    user = serializers.StringRelatedField(many=False)
-
     class Meta:
         model = models.buyer
         fields = "__all__"
