@@ -11,6 +11,7 @@ from django.utils.encoding import force_bytes
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from rest_framework.authtoken.models import Token
+from django.http import HttpResponse
 
 # for sending email
 from django.core.mail import EmailMultiAlternatives
@@ -115,7 +116,7 @@ def activate(request, uid64, token):
     if user is not None and default_token_generator.check_token(user, token):
         user.is_active = True
         user.save()
-        return redirect("login")
+        return HttpResponse("go back to login page")
     else:
         return redirect("register")
 
